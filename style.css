@@ -404,6 +404,7 @@ input[type="radio"] {
 /* ×と＝の記号 */
 .display-area tbody td:nth-child(2),
 .display-area tbody td:nth-child(4) {
+  width: 40px;
   color: #333;
   font-weight: 700;
 }
@@ -419,6 +420,7 @@ input[type="radio"] {
 }
 
 #seki {
+  width: 100px;
   color: #f57c00;
   font-weight: 700;
 }
@@ -769,6 +771,15 @@ button:hover {
     line-height: 70px;
   }
 
+  .display-area tbody td:nth-child(2),
+  .display-area tbody td:nth-child(4) {
+    width: 35px;
+  }
+
+  #seki {
+    width: 85px;
+  }
+
   .array-display td {
     height: 40px;
     width: 40px;
@@ -840,6 +851,15 @@ button:hover {
     height: 60px;
     font-size: 32px;
     line-height: 60px;
+  }
+
+  .display-area tbody td:nth-child(2),
+  .display-area tbody td:nth-child(4) {
+    width: 30px;
+  }
+
+  #seki {
+    width: 70px;
   }
 
   .array-display td {
