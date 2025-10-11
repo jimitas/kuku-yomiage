@@ -1,0 +1,849 @@
+/* ========================================
+   基本スタイル
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 0.5rem 0 0 0.5rem;
+  line-height: 1.1;
+  font-family: "UD Digi Kyokasho NK-B", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 400;
+  color: white;
+  background-color: #2a4d5a;
+  user-select: none;
+  overflow-x: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  overscroll-behavior: none;
+}
+
+/* ========================================
+   レイアウト
+======================================== */
+
+header {
+  width: 95%;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+}
+
+header section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  width: 95%;
+  margin: 0.25rem;
+  min-height: calc(100vh - 5rem);
+}
+
+footer {
+  width: 95%;
+  padding: 1rem;
+  margin-top: 0.25rem;
+  background-color: #1a3a3a;
+  border-radius: 8px;
+  border: 2px solid #4a7c7e;
+}
+
+footer p {
+  margin: 0.5rem;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.5;
+  color: white;
+}
+
+footer p:last-child {
+  text-align: center;
+}
+
+footer a {
+  color: #ffd54f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   文字サイズ
+======================================== */
+
+h1 {
+  font-size: clamp(18px, 3vw, 24px);
+  line-height: 1.1;
+  margin-top: 0.25rem;
+}
+
+h2 {
+  margin: 0;
+  padding: 0.5rem 0 0 0;
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+h3 {
+  padding: 0.25rem 0 0 0;
+  font-size: clamp(18px, 2.8vw, 22px);
+}
+
+h4, h6 {
+  line-height: 1.1;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
+h6 {
+  margin: 0.5rem;
+}
+
+p {
+  margin: 0.25rem;
+  font-size: clamp(18px, 2.5vw, 22px);
+}
+
+a {
+  color: #ffd54f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   黒板スタイル
+======================================== */
+
+.kokuban {
+  width: 95%;
+  padding: 0.5rem;
+  color: #fff;
+  background-color: #1a3a3a;
+  border: 6px solid #8b7355;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.meate {
+  width: 90%;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  position: relative;
+  border: solid 2px #ffb74d;
+  border-radius: 4px;
+  padding: 0.75rem;
+}
+
+.meate .box-title {
+  position: absolute;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  top: -0.75rem;
+  left: 1rem;
+  line-height: 1.1;
+  font-weight: bold;
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: #ffffff;
+  border: solid 2px #ffb74d;
+  background: #ff8f00;
+  border-radius: 6px;
+}
+
+.meate p {
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+  padding-top: 0.5rem;
+}
+
+/* セレクトボックス用フレックスコンテナ */
+.select-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* だんの数コンテナ */
+.dan-container {
+  flex: 1;
+  position: relative;
+  border: solid 2px #ff2599;
+  border-radius: 4px;
+  padding: 0.75rem;
+}
+
+.dan-container .box-title {
+  position: absolute;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  top: -0.75rem;
+  left: 1rem;
+  line-height: 1.1;
+  font-weight: bold;
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: #ffffff;
+  border: solid 2px #ff2599;
+  background: #c2185b;
+  border-radius: 6px;
+}
+
+.dan-container .select-box {
+  margin-top: 1rem;
+}
+
+/* れんしゅうのしかたコンテナ */
+.renshu-container {
+  flex: 1;
+  position: relative;
+  border: solid 2px #9e9e9e;
+  border-radius: 4px;
+  padding: 0.75rem;
+}
+
+.renshu-container .box-title {
+  position: absolute;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  top: -0.75rem;
+  left: 1rem;
+  line-height: 1.1;
+  font-weight: bold;
+  font-size: clamp(12px, 1.8vw, 16px);
+  color: #ffffff;
+  border: solid 2px #9e9e9e;
+  background: #616161;
+  border-radius: 6px;
+}
+
+.renshu-container .select-box {
+  margin-top: 1rem;
+}
+
+.renshu-container .input-area {
+  padding-top: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+/* ========================================
+   左右分割レイアウト
+======================================== */
+
+.split-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.left-content {
+  flex: 0 0 50%;
+  padding: 1rem;
+}
+
+.left-content > p {
+  line-height: 1.5;
+}
+
+.right-content {
+  flex: 0 0 50%;
+  padding: 1rem 1rem 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* ========================================
+   ステップラベル
+======================================== */
+
+.step-label {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.step-label-1 {
+  background-color: #ff2599;
+  color: white;
+}
+
+.step-label-2 {
+  background-color: #757575;
+  color: white;
+}
+
+.step-label-3 {
+  background-color: #0288d1;
+  color: white;
+}
+
+.step-label-4 {
+  background-color: #f57c00;
+  color: white;
+}
+
+/* ========================================
+   入力エリア
+======================================== */
+
+.input-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+.input-area label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-size: 50px;
+  font-weight: 600;
+  min-width: 80px;
+  min-height: 80px;
+  justify-content: center;
+}
+
+.input-area label:hover {
+  background-color: rgba(255, 213, 79, 0.1);
+}
+
+input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+/* セレクトボックス */
+.select-box {
+  width: 100%;
+  max-width: 250px;
+  height: 45px;
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "UD Digi Kyokasho NK-B", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
+  color: #1a1a1a;
+  background-color: antiquewhite;
+  border: 2px solid #4a7c7e;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.select-box:hover {
+  background-color: #f5deb3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.select-box:focus {
+  outline: 3px solid #4a7c7e;
+  outline-offset: 2px;
+}
+
+/* ========================================
+   表示エリア
+======================================== */
+
+.display-area {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.display-area table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.display-area th {
+  width: 70px;
+  height: 70px;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #1565c0;
+  font-weight: 700;
+  background-color: white;
+  border: 2px solid #90caf9;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.display-area td {
+  width: 70px;
+  height: 80px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 80px;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #4a7c7e;
+  border-radius: 8px;
+  padding: 0;
+}
+
+/* ×と＝の記号 */
+.display-area tbody td:nth-child(2),
+.display-area tbody td:nth-child(4) {
+  color: #333;
+  font-weight: 700;
+}
+
+#hijousu {
+  color: #ec4899;
+  font-weight: 700;
+}
+
+#jousu {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+#seki {
+  color: #f57c00;
+  font-weight: 700;
+}
+
+/* ========================================
+   チェックボックス
+======================================== */
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+label {
+  cursor: pointer;
+  font-size: clamp(16px, 2.5vw, 20px);
+  vertical-align: middle;
+}
+
+/* ========================================
+   トースト通知
+======================================== */
+
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(100vw);
+  background-color: #2a4d5a;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #4a7c7e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.toast.show {
+  transform: translateX(-50%);
+}
+
+.toast h4 {
+  margin: 0 0 0.5rem 0;
+  color: #ffd54f;
+  font-size: 16px;
+}
+
+.toast p {
+  margin: 0.25rem 0;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.toast-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #ffd54f;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-close:hover {
+  background-color: rgba(255, 213, 79, 0.2);
+  border-radius: 50%;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ========================================
+   配列表示エリア
+======================================== */
+
+.array-container {
+  width: fit-content;
+  margin: 1rem 0;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: opacity 0.3s ease;
+}
+
+.array-container.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.array-layout {
+  display: grid;
+  grid-template-columns: 40px repeat(9, 40px);
+  grid-template-rows: 30px repeat(9, 40px);
+  grid-template-areas:
+    "corner top top top top top top top top top"
+    "left grid grid grid grid grid grid grid grid grid"
+    "left grid grid grid grid grid grid grid grid grid"
+    "left grid grid grid grid grid grid grid grid grid"
+    "left grid grid grid grid grid grid grid grid grid"
+    "left grid grid grid grid grid grid grid grid grid"
+    "left grid grid grid grid grid grid grid grid grid"
+    "left grid grid grid grid grid grid grid grid grid"
+    "left grid grid grid grid grid grid grid grid grid"
+    "left grid grid grid grid grid grid grid grid grid";
+  gap: 0;
+  width: fit-content;
+}
+
+/* 左上の角（×記号） */
+.array-corner {
+  grid-area: corner;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 20px;
+  user-select: none;
+  padding-bottom: 4px;
+}
+
+/* 上部のかける数ボタン */
+.array-top-buttons {
+  grid-area: top;
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  gap: 0;
+  place-items: end center;
+}
+
+.array-top-buttons button {
+  width: 38px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #2563eb;
+  color: white;
+  border: 2px solid #1d4ed8;
+  border-radius: 6px;
+  cursor: default;
+  box-shadow: 0 1px 2px rgba(17, 24, 39, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 左側のかけられる数ボタン */
+.array-left-buttons {
+  grid-area: left;
+  display: grid;
+  grid-template-rows: repeat(9, 40px);
+  gap: 0;
+  place-items: center end;
+  padding-right: 2px;
+}
+
+.array-left-buttons button {
+  width: 38px;
+  height: 38px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #ec4899;
+  color: white;
+  border: 2px solid #db2777;
+  border-radius: 6px;
+  cursor: default;
+  box-shadow: 0 1px 2px rgba(17, 24, 39, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* アレイ図本体 */
+.array-display {
+  grid-area: grid;
+}
+
+.array-display table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.array-display td {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  position: relative;
+}
+
+/* アレイ図のドット */
+.array-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f0f3f8 40%, #dde3ec 100%);
+  border: 1px solid #c9ced6;
+  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.04), 0 2px 4px rgba(17, 24, 39, 0.08);
+  transition: background 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+  margin: 0 auto;
+}
+
+/* ドットの点灯状態 */
+.array-dot.lit {
+  background: #ff8a3d;
+  border-color: #e26e00;
+  box-shadow: 0 0 0 2px rgba(255, 138, 61, 0.25) inset, 0 1px 0 rgba(17, 24, 39, 0.06);
+}
+
+/* ========================================
+   ボタン
+======================================== */
+
+button {
+  height: 45px;
+  font-size: clamp(18px, 3vw, 22px);
+  font-weight: 500;
+  font-family: "UD Digi Kyokasho NK-B", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 8px;
+  padding: 0.25rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+#reset {
+  color: white;
+  background-color: #d84315;
+  font-weight: 600;
+}
+
+#start {
+  margin: 0 0.5rem;
+  color: white;
+  background-color: #0288d1;
+  border: 2px solid #01579b;
+  font-weight: 600;
+}
+
+#next {
+  margin: 0 0.5rem;
+  color: white;
+  background-color: #f57c00;
+  border: 2px solid #e65100;
+  font-weight: 600;
+}
+
+/* ========================================
+   レスポンシブデザイン
+======================================== */
+
+@media (max-width: 768px) {
+  body {
+    padding: 0.25rem;
+    font-size: 18px;
+  }
+
+  header section {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .meate {
+    width: 95%;
+    margin: 0.5rem;
+  }
+
+  .select-container {
+    flex-direction: column;
+  }
+
+  .dan-container {
+    width: 100%;
+  }
+
+  .renshu-container {
+    width: 100%;
+  }
+
+  .input-area {
+    justify-content: center;
+  }
+
+  .input-area label {
+    font-size: 40px;
+    min-width: 70px;
+    min-height: 70px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  input[type="radio"] {
+    width: 24px;
+    height: 24px;
+  }
+
+  .select-box {
+    max-width: 220px;
+    height: 40px;
+    font-size: 18px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  button {
+    height: 40px;
+    font-size: 18px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+  }
+
+  .kokuban {
+    padding: 0.5rem;
+    border-width: 4px;
+  }
+
+  .display-area th {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .display-area td {
+    width: 60px;
+    height: 70px;
+    font-size: 40px;
+    line-height: 70px;
+  }
+
+  .array-display td {
+    height: 40px;
+    width: 40px;
+  }
+
+  /* タブレット以下では縦並びに変更 */
+  .split-container {
+    flex-direction: column;
+  }
+
+  .left-content,
+  .right-content {
+    flex: 1 1 100%;
+  }
+
+  .toast {
+    left: 50%;
+    max-width: calc(100% - 40px);
+  }
+
+  .toast.show {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .input-area label {
+    font-size: 32px;
+    min-width: 60px;
+    min-height: 60px;
+    padding: 0.3rem 0.5rem;
+  }
+
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .select-box {
+    max-width: 200px;
+    height: 35px;
+    font-size: 16px;
+    padding: 0.3rem 0.6rem;
+  }
+
+  button {
+    height: 35px;
+    font-size: 16px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+  }
+
+  .display-area th {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .display-area td {
+    width: 50px;
+    height: 60px;
+    font-size: 32px;
+    line-height: 60px;
+  }
+
+  .array-display td {
+    height: 35px;
+    width: 35px;
+  }
+}
