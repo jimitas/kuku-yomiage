@@ -3,9 +3,18 @@
  * 九九の読み上げ練習アプリケーション
  * 黒板風UIで九九を練習
  */
-import { pi, set, alert, seikai1 } from './se.js';
+import { pi, set, alert, seikai1, preloadAllSounds } from './se.js';
 
-(function() {
+// 音声の読み込み完了を待ってからアプリケーションを開始
+preloadAllSounds().then(() => {
+  console.log("📱 アプリケーションの初期化完了");
+  initApp();
+}).catch((error) => {
+  console.error("音声読み込み中にエラーが発生しましたが、アプリケーションを起動します:", error);
+  initApp();
+});
+
+function initApp() {
   // DOM要素の取得
   const TBL = document.getElementById('TBL');
   const hijousu = document.getElementById('hijousu');
@@ -329,5 +338,4 @@ import { pi, set, alert, seikai1 } from './se.js';
     isStarted = true;
     nextBtn.disabled = false;
   });
-
-})();
+}
