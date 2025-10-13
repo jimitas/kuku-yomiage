@@ -23,6 +23,7 @@ body {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   overscroll-behavior: none;
+  touch-action: manipulation; /* ダブルタップズームを無効化、スクロールは有効 */
 }
 
 /* ========================================
